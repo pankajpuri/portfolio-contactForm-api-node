@@ -4,7 +4,9 @@ const cors = require("cors");
 const config = require("config");
 const app = express();
 app.use(express.json());
-app.use(cors({ orgin: "http:localhost:8000/send-email" }));
+app.use(
+  cors({ orgin: "https://thawing-shore-00690.herokuapp.com/send-email" })
+);
 
 app.post("/send-email", (req, res) => {
   const { name, email, message } = req.body;
